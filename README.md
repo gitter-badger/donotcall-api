@@ -1,6 +1,8 @@
 
 # Do Not Call API
 
+[![Join the chat at https://gitter.im/chadmiko/donotcall-api](https://badges.gitter.im/chadmiko/donotcall-api.svg)](https://gitter.im/chadmiko/donotcall-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Basic API endopoint that will allow actor to test for existence of 10-digit phone numbers against a list
 
 ## Design Roadmap:
