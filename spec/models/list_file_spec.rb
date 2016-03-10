@@ -17,7 +17,6 @@ RSpec.describe ListFile, type: :model do
   describe '#local_file' do
     it 'returns an existing filepath' do
       list_file = FactoryGirl.create(:list_file)
-      puts File.exist?(list_file.upload.path)
       path = list_file.local_file
       expect(File.exist?(path)).to eq(true)
     end
