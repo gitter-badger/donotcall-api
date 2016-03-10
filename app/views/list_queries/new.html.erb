@@ -1,0 +1,14 @@
+<div style="max-width: 100%; text-align: center">
+  <%= form_tag list_queries_path, method: :post do %>
+    <div><%= text_area_tag 'numbers', params[:numbers], rows: 4, cols: 40, placeholder: 'Enter list of 10-digit phone numbers' %></div>
+    <div><%= submit_tag 'Check Numbers' %></div>
+  <% end %>
+
+
+  <% if @results %>
+    <h4>Results</h4>
+    <% @results.each do |result| %>
+      <p><span style="color:black"><%= result.result_status_text %></span>&nbsp;<span style="color:<%= result.not_ok? ? 'red' : 'black' %>"><%= number_to_phone(result.input) %></span></p>
+    <% end %>
+  <% end %>
+</div>
