@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309051911) do
+ActiveRecord::Schema.define(version: 20160310160015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160309051911) do
     t.boolean  "active",                        default: false
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
+    t.string   "upload_fingerprint"
   end
 
   add_index "list_files", ["state"], name: "index_list_files_on_state", using: :btree
